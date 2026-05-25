@@ -1,0 +1,31 @@
+name: Feature request or MEP proposal
+description: Propose a change to the public Mosvera specification.
+title: "[MEP]: "
+labels:
+  - enhancement
+  - mep
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem statement
+      description: What interoperability, portability, or expressiveness gap does this address?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Name the primitive, semantic rule, schema field, or compilation behavior you want to add or change.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Prior art and alternatives
+      description: Comparable standards, provider behavior, or existing tools that should inform the design.
+  - type: textarea
+    id: compatibility
+    attributes:
+      label: Compatibility and migration
+      description: Does this change affect existing compositions, schemas, conformance vectors, or adapters?

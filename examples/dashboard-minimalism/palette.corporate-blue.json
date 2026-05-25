@@ -1,0 +1,10 @@
+{
+  "$schema": "https://mosvera.io/schema/0.1/palette",
+  "id": "corporate-blue",
+  "roles": {
+    "primary": "#1a73e8",
+    "accent": "#34a853",
+    "background": "#f8f9fa",
+    "surface": "#ffffff"
+  }
+}

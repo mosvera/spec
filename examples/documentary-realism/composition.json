@@ -1,0 +1,12 @@
+{
+  "$schema": "https://mosvera.io/schema/0.1/composition",
+  "id": "street-documentary-overcast",
+  "base": "documentary-realism-base",
+  "modifiers": ["overcast"],
+  "overrides": {
+    "subject": "a fisherman mending nets on a concrete pier in morning fog",
+    "aspect_ratio": "3:2",
+    "quality": "high",
+    "safety": "standard"
+  }
+}

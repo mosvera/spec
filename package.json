@@ -1,0 +1,15 @@
+{
+  "name": "@mosvera/spec",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Mosvera specification: schemas, MEPs, conformance vectors, and worked examples.",
+  "license": "CC-BY-4.0",
+  "scripts": {
+    "ci": "npm run validate",
+    "validate": "node scripts/validate-spec.mjs"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1"
+  }
+}

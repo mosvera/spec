@@ -1,0 +1,40 @@
+name: Bug report
+description: Report behavior that appears incorrect in Mosvera.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What happened, and what did you expect instead?
+    validations:
+      required: true
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Surface
+      options:
+        - spec
+        - runtime
+        - mcp
+        - provider adapter
+        - examples
+        - documentation
+        - unsure
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Include the composition, schema, command, or provider payload needed to reproduce the issue.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Runtime version, package version, Node.js version, provider, or operating system if relevant.

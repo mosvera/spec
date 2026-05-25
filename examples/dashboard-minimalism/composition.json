@@ -1,0 +1,11 @@
+{
+  "$schema": "https://mosvera.io/schema/0.1/composition",
+  "id": "corporate-dashboard-dark",
+  "base": "dashboard-minimalism-base",
+  "modifiers": ["dark-mode", "high-density"],
+  "overrides": {
+    "aspect_ratio": "16:9",
+    "quality": "medium",
+    "safety": "standard"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "https://mosvera.io/schema/0.1/modifier",
+  "id": "dark-mode",
+  "color_grade": { "contrast": "medium", "saturation": "muted" },
+  "palette": { "accent": "#8ab4f8" }
+}

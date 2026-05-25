@@ -1,0 +1,8 @@
+{
+  "$schema": "https://mosvera.io/schema/0.1/template",
+  "id": "dashboard-minimalism-base",
+  "medium": "digital_illustration",
+  "lighting": { "scheme": "flat", "mood": "neutral" },
+  "color_grade": { "contrast": "low", "saturation": "muted" },
+  "palette": { "accent": "#1a73e8" }
+}

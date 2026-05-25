@@ -1,0 +1,33 @@
+name: Provider adapter request
+description: Request support for a new generation provider.
+title: "[Provider]: "
+labels:
+  - provider
+  - enhancement
+body:
+  - type: input
+    id: provider
+    attributes:
+      label: Provider and model
+      placeholder: "Example: Runway Gen-4"
+    validations:
+      required: true
+  - type: textarea
+    id: api
+    attributes:
+      label: Official API surface
+      description: Link to the official API documentation. Unofficial or reverse-engineered APIs are out of scope.
+    validations:
+      required: true
+  - type: textarea
+    id: value
+    attributes:
+      label: Why this provider matters
+      description: What portability axis or user need would this adapter prove?
+    validations:
+      required: true
+  - type: textarea
+    id: mapping
+    attributes:
+      label: Known mapping constraints
+      description: Note any unsupported concepts, required parameters, safety controls, or execution model differences.

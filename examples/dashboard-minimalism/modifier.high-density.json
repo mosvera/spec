@@ -1,0 +1,5 @@
+{
+  "$schema": "https://mosvera.io/schema/0.1/modifier",
+  "id": "high-density",
+  "subject": "a dense but clean data visualization dashboard showing quarterly revenue trends"
+}
