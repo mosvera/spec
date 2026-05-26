@@ -6,9 +6,12 @@ SPDX-License-Identifier: CC-BY-4.0
 
 Portable `.mosvera.json` files for testing Mosvera import/export flows.
 
-The canonical v0.1 gallery packs mirror the four live `mosvera.io`
-demonstrator aesthetics. Each pack contains a named composition plus its
-required base template:
+These spec-side packs are small contract samples. The canonical public gallery
+with 25 visual packs lives in
+[`mosvera/examples`](https://github.com/mosvera/examples/tree/main/packs) and
+is mirrored by `mosvera.io`.
+
+Each sample pack contains a named composition plus its required base template:
 
 - [`quiet-editorial.mosvera.json`](./quiet-editorial.mosvera.json)
 - [`technical-manual.mosvera.json`](./technical-manual.mosvera.json)

@@ -17,9 +17,10 @@ providers, send provider HTTP requests, store API keys, or put secrets in
 aesthetic packs.
 
 The sample pack used below is
-[`claymation-playful-builder.mosvera.json`](../../examples/packs/claymation-playful-builder.mosvera.json).
-You can download the other v1 packs from the
-[mosvera.io pack gallery](https://mosvera.io/).
+[`claymation-playful-builder.mosvera.json`](https://github.com/mosvera/examples/blob/main/packs/claymation-playful-builder.mosvera.json).
+You can download the full public pack gallery from
+[`mosvera/examples`](https://github.com/mosvera/examples/tree/main/packs) or browse it on
+[mosvera.io](https://mosvera.io/).
 
 ## Claude Desktop
 
@@ -54,7 +55,7 @@ Expected success: you see the four seeded v1 aesthetics:
 Download the sample pack from:
 
 ```text
-https://raw.githubusercontent.com/mosvera/spec/main/examples/packs/claymation-playful-builder.mosvera.json
+https://raw.githubusercontent.com/mosvera/examples/main/packs/claymation-playful-builder.mosvera.json
 ```
 
 Then ask Claude to preview and import the local file:
@@ -128,7 +129,7 @@ npm init -y
 npm pkg set type=module
 npm install @mosvera/runtime
 curl -fsS -o claymation-playful-builder.mosvera.json \
-  https://raw.githubusercontent.com/mosvera/spec/main/examples/packs/claymation-playful-builder.mosvera.json
+  https://raw.githubusercontent.com/mosvera/examples/main/packs/claymation-playful-builder.mosvera.json
 ```
 
 Create `quickstart.mjs`:
@@ -183,7 +184,7 @@ python3 -m venv .venv
 . .venv/bin/activate
 pip install mosvera
 curl -fsS -o claymation-playful-builder.mosvera.json \
-  https://raw.githubusercontent.com/mosvera/spec/main/examples/packs/claymation-playful-builder.mosvera.json
+  https://raw.githubusercontent.com/mosvera/examples/main/packs/claymation-playful-builder.mosvera.json
 ```
 
 Create `quickstart.py`:

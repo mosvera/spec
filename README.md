@@ -25,8 +25,8 @@ systems, and build pipelines.
   composition documents, packs, registries, tokens, and payloads.
 - [`meps/`](./meps/) — proposal process and foundational specification MEPs.
 - [`compliance/`](./compliance/) — language-neutral conformance vectors.
-- [`examples/`](./examples/) — worked systems and portable aesthetic packs.
-- [`examples/packs/claymation-playful-builder.mosvera.json`](./examples/packs/claymation-playful-builder.mosvera.json) — canonical sample pack.
+- [`examples/`](./examples/) — small spec-side sample packs and worked systems.
+- [`mosvera/examples`](https://github.com/mosvera/examples/tree/main/packs) — canonical public aesthetic pack gallery.
 - [`MANIFESTO.md`](./MANIFESTO.md) — conceptual frame.
 - [`ROADMAP.md`](./ROADMAP.md) — current phase and future work.
 
