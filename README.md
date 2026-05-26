@@ -6,14 +6,15 @@ SPDX-License-Identifier: CC-BY-4.0
 
 **A declarative runtime for aesthetic intent in AI-native systems.**
 
-This is the flagship Mosvera repository: schemas, specification prose,
-Mosvera Enhancement Proposals (MEPs), conformance vectors, governance, and
-worked aesthetic systems.
+This is the canonical Mosvera contract: schemas, specification prose,
+Mosvera Enhancement Proposals (MEPs), conformance vectors, terminology,
+governance, and portable example packs.
 
-Mosvera models aesthetic intent as portable primitives such as templates,
-palettes, modifiers, and compositions. Reference runtimes and provider
-adapters compile that provider-neutral model into execution surfaces such as
-OpenAI, FLUX, and SDXL without making prompts the source of truth.
+Mosvera lets teams name an aesthetic, store it as portable JSON documents,
+resolve it into a canonical model, and compile that model into tokens or
+provider payloads inside their own tools. The public website demonstrates the
+idea, but production users bring Mosvera into their own apps, agents, design
+systems, and build pipelines.
 
 ## Start Here
 
@@ -23,15 +24,16 @@ OpenAI, FLUX, and SDXL without making prompts the source of truth.
   composition documents, packs, registries, tokens, and payloads.
 - [`meps/`](./meps/) — proposal process and foundational specification MEPs.
 - [`compliance/`](./compliance/) — language-neutral conformance vectors.
-- [`examples/`](./examples/) — three worked aesthetic systems.
+- [`examples/`](./examples/) — worked systems and portable aesthetic packs.
+- [`examples/packs/claymation-playful-builder.mosvera.json`](./examples/packs/claymation-playful-builder.mosvera.json) — canonical sample pack.
 - [`MANIFESTO.md`](./MANIFESTO.md) — conceptual frame.
 - [`ROADMAP.md`](./ROADMAP.md) — current phase and future work.
 
 ## Which Package Do I Need?
 
 Use `@mosvera/runtime` when your app needs to validate Mosvera documents,
-resolve templates/modifiers/compositions, or produce the canonical model from
-a JavaScript or TypeScript environment.
+load a local registry, resolve a named aesthetic, and compile portable design
+tokens from a JavaScript or TypeScript environment.
 
 ```bash
 npm install @mosvera/runtime
@@ -53,7 +55,9 @@ npm install @mosvera/provider-sdxl
 ```
 
 Use `@mosvera/mcp` when you want Mosvera exposed as MCP tools for agents,
-editors, or automation:
+editors, or automation. It runs locally, reads and writes a user-owned local
+registry, and lets tools such as Claude Desktop list, resolve, save, export,
+and import named aesthetics:
 
 ```bash
 npm install -g @mosvera/mcp
@@ -64,16 +68,17 @@ Claude Desktop users should prefer the `.mcpb` bundle attached to
 [`mosvera/mcp` releases](https://github.com/mosvera/mcp/releases).
 
 Use this spec repository when you are implementing Mosvera in another language,
-checking the schemas/conformance vectors, or proposing changes to the public
-contract.
+checking schemas/conformance vectors, importing a sample aesthetic pack, or
+proposing changes to the public contract.
 
 ## Status
 
-Mosvera is in Phase 6 mechanical public unlock. Phases 0-5 are complete:
-the v0.1 schemas, conformance vectors, TypeScript runtime, Python runtime,
-MCP surface, OpenAI adapter, FLUX adapter, SDXL adapter, and three worked
-examples are in place. The v0.1 interfaces remain provisional until external
-implementer feedback proves them stable.
+Phase 6G is complete: the first public runtime surface is available. The v0.1
+schemas, conformance vectors, TypeScript runtime, Python runtime, MCP bridge,
+OpenAI adapter, FLUX adapter, SDXL adapter, Claude Desktop bundle, schema
+hosting, and canonical sample aesthetic pack are in place. The v0.1
+interfaces remain provisional until external implementer feedback proves them
+stable.
 
 ## Repositories
 
