@@ -18,11 +18,34 @@ shaped the vocabulary, see
 (naming) and
 [ADR-0006](./docs/decisions/0006-prior-art-survey.md) (prior art).
 
+## Do Not Collapse The Terms
+
+Do not flatten Mosvera's language into a single generic word like
+"theme" or "style." Those words are useful in product copy when they
+match a host application's domain, but the Mosvera contract keeps
+distinct layers:
+
+- **Aesthetic** is the user-facing named intent.
+- **Composition** is the technical document that resolves that intent.
+- **Aesthetic pack** is the portable `.mosvera.json` exchange file.
+- **Registry** is the local collection where documents live.
+- **Tokens** and provider **payloads** are compiled outputs, not source
+  documents.
+
 ## A
 
 ### Adapter
 
 See [Provider adapter](#provider-adapter).
+
+### Aesthetic
+
+The user-facing named intent a person asks Mosvera to apply, such as
+`executive-editorial` or `claymation-playful-builder`. In a registry,
+a named aesthetic is usually backed by a
+[Composition](#composition) document, but "aesthetic" is the preferred
+beginner-facing noun because it names the effect a user wants rather
+than the technical document that implements it.
 
 ### Aesthetic intent
 
@@ -30,6 +53,16 @@ The semantic meaning behind a generative call, expressed as a
 structural model rather than as a free-text prompt. The unit Mosvera
 operates on. Aesthetic intent is provider-neutral, language-neutral,
 and composable.
+
+### Aesthetic pack
+
+A portable `.mosvera.json` exchange file containing one or more
+Mosvera registry documents and an entrypoint named aesthetic. A pack
+uses `kind: "mosvera.aesthetic_pack"` and is validated by the
+`https://mosvera.io/schema/0.1/aesthetic-pack` schema. V1 packs carry
+templates, palettes, modifiers, compositions, and optional merge
+strategies only; they do not carry assets, provider manifests,
+credentials, remote URLs, or zip-bundled content.
 
 ### Aesthetic primitive
 
@@ -66,12 +99,12 @@ emission has happened yet.
 
 ### Composition
 
-A specific, executable assembly of aesthetic primitives — one or more
-templates extended by modifiers, with optional scoped overrides.
-Compositions are the user-facing artifact: what gets authored, what
-gets versioned, what gets compiled to provider calls. Compositions
-inherit and resolve through documented rules (see
-[`spec/meps/`](./meps/) once Phase 1 lands).
+A technical Mosvera document that resolves into a canonical aesthetic
+model. A composition document names a base template, optional ordered
+modifiers, and optional scoped overrides. It is the document shape
+runtimes execute, version, validate, and exchange; for beginner-facing
+language, prefer [Aesthetic](#aesthetic) when referring to the named
+intent a user selects or asks an agent to apply.
 
 ### Compiler / Compilation
 
@@ -180,6 +213,14 @@ ships `providers/openai/` and `providers/flux/` per
 [ADR-0008](./docs/decisions/0008-provider-adapter-pairing.md).
 
 ## R
+
+### Registry
+
+A local collection of named aesthetics and registry documents. A
+registry usually contains templates, palettes, modifiers, composition
+documents, optional capability manifests, and optional merge
+strategies. The registry belongs to the user or project using Mosvera;
+it is not hosted on `mosvera.io` by default.
 
 ### Reference runtime
 

@@ -40,6 +40,7 @@ runtimes.
 | [`modifier.schema.json`](./modifier.schema.json) | A partial aesthetic delta deep-merged onto a base (MEP-0001). |
 | [`palette.schema.json`](./palette.schema.json) | Semantic role → color value; DTCG-compat target per ADR-0006. |
 | [`capability-manifest.schema.json`](./capability-manifest.schema.json) | A provider adapter's per-construct lowering-action declaration (MEP-0003). |
+| [`aesthetic-pack.schema.json`](./aesthetic-pack.schema.json) | Portable `.mosvera.json` exchange file for a named aesthetic and its registry dependencies. |
 
 The **aesthetic vocabulary is intentionally open at v0.1** — templates and
 modifiers constrain *structure and naming*, not the specific aesthetic fields
@@ -49,14 +50,14 @@ examples exercise it.
 
 ## Status
 
-Phase 1 (Specification Genesis). The six schemas above are present and
+Phase 6G (Aesthetic Pack Exchange). The seven core schemas above are present and
 encode the three foundational MEPs (0001 composition, 0002 inheritance,
-0003 provider compilation) plus ADR-0005 naming.
+0003 provider compilation), aesthetic pack exchange, and ADR-0005 naming.
 
 ## Meta-schema check
 
 Every published schema validates against the JSON Schema 2020-12
-meta-schema. All six currently pass, along with positive/negative
+meta-schema. All seven currently pass, along with positive/negative
 document tests (a valid composition is accepted; malformed documents —
 hyphenated fields, uppercase fields, unknown `$`-directives, missing
 required fields — are rejected; and a capability manifest with an

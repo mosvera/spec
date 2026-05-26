@@ -19,6 +19,8 @@ OpenAI, FLUX, and SDXL without making prompts the source of truth.
 
 - [`schemas/`](./schemas/) — v0.1 JSON Schemas rooted at
   `https://mosvera.io/schema/0.1/...`.
+- [`GLOSSARY.md`](./GLOSSARY.md) — canonical terminology for aesthetics,
+  composition documents, packs, registries, tokens, and payloads.
 - [`meps/`](./meps/) — proposal process and foundational specification MEPs.
 - [`compliance/`](./compliance/) — language-neutral conformance vectors.
 - [`examples/`](./examples/) — three worked aesthetic systems.
