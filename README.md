@@ -35,9 +35,7 @@ a JavaScript or TypeScript environment.
 npm install @mosvera/runtime
 ```
 
-Use `mosvera` when you need the same runtime contract from Python. The Python
-package is prepared for the coordinated JS/Python release, but not published
-to PyPI yet.
+Use `mosvera` when you need the same runtime contract from Python.
 
 ```bash
 pip install mosvera
