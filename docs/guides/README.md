@@ -4,11 +4,16 @@ SPDX-License-Identifier: CC-BY-4.0
 
 # docs/guides/
 
-How-to guides and concept guides for Mosvera. Content lands as the
-runtime, MCP server, and provider adapters ship — there's nothing
-useful to guide a reader through until those exist.
+How-to guides and concept guides for using Mosvera. Start with the live
+quickstart, then move into narrower guides as the surface grows.
 
-## Planned guides (post-Phase-4)
+## Available Guides
+
+- [`10-minute-quickstart.md`](./10-minute-quickstart.md) — install Mosvera in
+  Claude Desktop first, then verify the npm/MCP, TypeScript runtime, and
+  Python runtime paths.
+
+## Planned Guides
 
 - **Authoring an aesthetic template** — concepts, primitives, the
   composition file format.

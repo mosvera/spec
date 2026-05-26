@@ -18,6 +18,7 @@ systems, and build pipelines.
 
 ## Start Here
 
+- [`docs/guides/10-minute-quickstart.md`](./docs/guides/10-minute-quickstart.md) — prove Mosvera works with Claude Desktop, npm/MCP, TypeScript, or Python.
 - [`schemas/`](./schemas/) — v0.1 JSON Schemas rooted at
   `https://mosvera.io/schema/0.1/...`.
 - [`GLOSSARY.md`](./GLOSSARY.md) — canonical terminology for aesthetics,
