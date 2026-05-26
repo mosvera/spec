@@ -16,9 +16,9 @@ The first public runtime surface is live:
 |---------|----------------|
 | TypeScript/JavaScript runtime | `@mosvera/runtime@0.1.2` |
 | Python runtime | `mosvera@0.1.2` |
-| MCP bridge | `@mosvera/mcp@0.1.8` |
-| Provider adapters | `@mosvera/provider-base@0.1.3`, `@mosvera/provider-*@0.1.1`, Phase 6L providers at `0.1.2`, and `@mosvera/provider-elevenlabs@0.1.3` |
-| Claude Desktop bundle | `mosvera-mcp-0.1.8.mcpb` |
+| MCP bridge | `@mosvera/mcp@0.1.9` |
+| Provider adapters | `@mosvera/provider-base@0.1.3`, `@mosvera/provider-*@0.1.1`, Phase 6L providers at `0.1.3` |
+| Claude Desktop bundle | `mosvera-mcp-0.1.9.mcpb` |
 | Schema host | `https://mosvera.io/schema/0.1/*` |
 
 The scope included terminology cleanup, the aesthetic pack exchange schema,

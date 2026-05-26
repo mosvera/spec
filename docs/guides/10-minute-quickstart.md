@@ -26,7 +26,7 @@ You can download the other v1 packs from the
 Use this path if you want Mosvera tools inside Claude Desktop without touching
 the command line.
 
-1. Download `mosvera-mcp-0.1.8.mcpb` from the latest
+1. Download `mosvera-mcp-0.1.9.mcpb` from the latest
    [`mosvera/mcp` release](https://github.com/mosvera/mcp/releases/latest).
 2. Install it in Claude Desktop by opening the bundle or using Settings →
    Extensions → Advanced settings → Install Extension.

@@ -26,7 +26,7 @@ images for all three example systems.
 
 Phase 6 is **complete through Phase 6M**. The public repo split is live, the
 TypeScript and Python runtimes are published, provider packages are published,
-`@mosvera/mcp@0.1.8` is published, and the `mosvera-mcp-0.1.8.mcpb` Claude
+`@mosvera/mcp@0.1.9` is published, and the `mosvera-mcp-0.1.9.mcpb` Claude
 Desktop bundle is attached to the latest MCP release. Phase 6L expanded the
 provider layer beyond still images with Google, Runway, ElevenLabs, Adobe
 Firefly, and Meshy provider packages. Phase 6M reconciled the public package,
