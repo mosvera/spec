@@ -25,13 +25,34 @@ OpenAI, FLUX, and SDXL without making prompts the source of truth.
 - [`MANIFESTO.md`](./MANIFESTO.md) — conceptual frame.
 - [`ROADMAP.md`](./ROADMAP.md) — current phase and future work.
 
-The TypeScript runtime lives at
-[`github.com/mosvera/runtime`](https://github.com/mosvera/runtime). Once
-published, install it with:
+## Which Package Do I Need?
+
+Use `@mosvera/runtime` when your app needs to validate Mosvera documents,
+resolve templates/modifiers/compositions, or produce the canonical model.
 
 ```bash
 npm install @mosvera/runtime
 ```
+
+Use provider packages when you want to compile resolved Mosvera intent into
+provider payloads:
+
+```bash
+npm install @mosvera/provider-openai
+npm install @mosvera/provider-flux
+npm install @mosvera/provider-sdxl
+```
+
+Use `@mosvera/mcp` when you want Mosvera exposed as MCP tools for agents,
+editors, or automation:
+
+```bash
+npx mosvera-mcp
+```
+
+Use this spec repository when you are implementing Mosvera in another language,
+checking the schemas/conformance vectors, or proposing changes to the public
+contract.
 
 ## Status
 
