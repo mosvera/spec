@@ -16,14 +16,15 @@ The first public runtime surface is live:
 |---------|----------------|
 | TypeScript/JavaScript runtime | `@mosvera/runtime@0.1.2` |
 | Python runtime | `mosvera@0.1.2` |
-| MCP bridge | `@mosvera/mcp@0.1.5` |
-| Provider adapters | `@mosvera/provider-*@0.1.1` |
-| Claude Desktop bundle | `mosvera-mcp-0.1.5.mcpb` |
+| MCP bridge | `@mosvera/mcp@0.1.6` |
+| Provider adapters | `@mosvera/provider-base@0.1.3`, `@mosvera/provider-*@0.1.1`, and Phase 6L providers at `0.1.2` |
+| Claude Desktop bundle | `mosvera-mcp-0.1.6.mcpb` |
 | Schema host | `https://mosvera.io/schema/0.1/*` |
 
 The scope included terminology cleanup, the aesthetic pack exchange schema,
 TypeScript and Python runtime parity, MCP import/export/write tools, the
-Claude Desktop bundle, public schema hosting, and cross-surface smoke tests.
+Claude Desktop bundle, public schema hosting, cross-surface smoke tests, and
+Phase 6L multi-modal provider package publication.
 
 ## What Is Now True
 
@@ -39,6 +40,9 @@ Claude Desktop bundle, public schema hosting, and cross-surface smoke tests.
 - `mosvera.io` hosts the schemas, links to the public packages, and runs a
   static demonstrator that shows one page switching across the four v1 demo
   aesthetics.
+- Phase 6L provider packages add compile/optional-execute adapters for
+  Google Gemini/Veo, Runway, ElevenLabs, Adobe Firefly, and Meshy. MCP remains
+  compile-only for provider payloads.
 
 ## Verification Record
 
@@ -49,6 +53,8 @@ Closeout verification covered:
   runtime, MCP bridge, and spec repositories.
 - Clean npm install/import smoke for `@mosvera/runtime`, all reference
   provider packages, and `@mosvera/mcp`.
+- Tiny live provider smoke passed for Google, Runway, ElevenLabs, and Meshy;
+  Firefly smoke was skipped because no Firefly credential was present.
 - Clean PyPI virtualenv install/import smoke for `mosvera`.
 - MCP stdio smoke for tool annotations, read/write/destructive buckets,
   saving deterministic JSON, pack preview/import, read-only mode, and

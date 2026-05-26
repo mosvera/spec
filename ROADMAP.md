@@ -24,16 +24,18 @@ shipped the SDXL adapter, ADR-0013, three example systems, three-provider
 deterministic emissions, MCP adapter registration, and checked-in gallery
 images for all three example systems.
 
-Phase 6 is now **in progress**. The public repo split is live, the
+Phase 6 is **complete through Phase 6L**. The public repo split is live, the
 TypeScript and Python runtimes are published, provider packages are published,
-and `@mosvera/mcp` has been reshaped into the Phase 6F agent bridge with a
-Claude Desktop MCPB bundle path. Remaining Phase 6 work is closeout,
-site/docs link verification, release-asset publication, and post-public smoke.
+`@mosvera/mcp@0.1.6` is published, and the `mosvera-mcp-0.1.6.mcpb` Claude
+Desktop bundle is attached to the latest MCP release. Phase 6L expanded the
+provider layer beyond still images with Google, Runway, ElevenLabs, Adobe
+Firefly, and Meshy provider packages.
 
-Current local verification: runtime, Python runtime, providers, and MCP all
-pass their strict local suites; the MCP surface now has stdio smoke coverage
-for annotations, output schemas, read-only mode, aesthetic resolution, and
-token compilation.
+Current verification: runtime, Python runtime, providers, and MCP pass their
+strict local suites; MCP GitHub Actions is green; npm clean install/import
+passes for the runtime, providers, and MCP; live provider smoke passed for
+Google, Runway, ElevenLabs, and Meshy, with Firefly skipped until credentials
+exist.
 
 ## Phases
 
@@ -193,9 +195,12 @@ Outputs:
 - `runtime`, `mcp`, `providers`, `examples` follow as separate repos
   per the eventual split signaled in ADR-0002
 - Publish `@mosvera/runtime`, `@mosvera/mcp`, `@mosvera/provider-base`,
-  `@mosvera/provider-openai`, `@mosvera/provider-flux`, and
-  `@mosvera/provider-sdxl` to npm as installable JavaScript packages; ship a
-  `.mcpb` desktop bundle for non-command-line Claude Desktop users
+  `@mosvera/provider-openai`, `@mosvera/provider-flux`,
+  `@mosvera/provider-sdxl`, `@mosvera/provider-google`,
+  `@mosvera/provider-runway`, `@mosvera/provider-elevenlabs`,
+  `@mosvera/provider-firefly`, and `@mosvera/provider-meshy` to npm as
+  installable JavaScript packages; ship a `.mcpb` desktop bundle for
+  non-command-line Claude Desktop users
 - Open MEP process — `spec/meps/` becomes externally contributable
 - Governance transition: BDFL → small Technical Committee per
   [ADR-0004](./docs/decisions/0004-governance.md)

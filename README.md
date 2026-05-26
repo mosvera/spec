@@ -53,6 +53,11 @@ provider payloads:
 npm install @mosvera/provider-openai
 npm install @mosvera/provider-flux
 npm install @mosvera/provider-sdxl
+npm install @mosvera/provider-google
+npm install @mosvera/provider-runway
+npm install @mosvera/provider-elevenlabs
+npm install @mosvera/provider-firefly
+npm install @mosvera/provider-meshy
 ```
 
 Use `@mosvera/mcp` when you want Mosvera exposed as MCP tools for agents,
@@ -74,12 +79,14 @@ proposing changes to the public contract.
 
 ## Status
 
-Phase 6G is complete: the first public runtime surface is available. The v0.1
-schemas, conformance vectors, TypeScript runtime, Python runtime, MCP bridge,
-OpenAI adapter, FLUX adapter, SDXL adapter, Claude Desktop bundle, schema
-hosting, and canonical sample aesthetic pack are in place. The v0.1
-interfaces remain provisional until external implementer feedback proves them
-stable.
+Phase 6L is complete: the first public runtime surface is available and the
+provider layer now spans image, video, audio, and 3D payload compilation. The
+v0.1 schemas, conformance vectors, TypeScript runtime, Python runtime, MCP
+bridge, OpenAI adapter, FLUX adapter, SDXL adapter, HeyGen adapter, Google
+adapter, Runway adapter, ElevenLabs adapter, Firefly adapter, Meshy adapter,
+Claude Desktop bundle, schema hosting, and canonical sample aesthetic pack are
+in place. The v0.1 interfaces remain provisional until external implementer
+feedback proves them stable.
 
 ## Repositories
 
