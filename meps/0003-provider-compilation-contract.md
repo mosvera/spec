@@ -220,6 +220,31 @@ The compiled artifact (payload + warnings + provenance) is therefore a
 deterministic, inspectable function of the inputs, even though the image it
 ultimately produces is not.
 
+### Call-time provider options (implementation note)
+
+Provider adapters commonly accept call-time `providerOptions` alongside the
+resolved canonical model. These options are adapter-local execution inputs,
+not canonical Mosvera fields and not registry data. They may carry user
+content (`prompt`, `prompt_text`, `text`, `script`) or provider configuration
+(`voice_id`, `avatar_id`, reference inputs, model overrides, timeouts, output
+formats).
+
+User-authored content options are authoritative. Adapters MUST NOT silently
+replace a supplied prompt, text, or script with Mosvera-generated aesthetic
+prose. For prompt-only providers, the adapter preserves the user prompt and
+adds the compiled Mosvera direction as a visibly separated block such as:
+
+```text
+<user prompt>
+
+Mosvera aesthetic direction: <compiled aesthetic prompt>
+```
+
+For speech and avatar providers, the adapter preserves `text` or `script` as
+the spoken content and maps Mosvera direction into provider style, motion,
+background, delivery, or metadata fields where available. Loss remains
+visible through the normal warnings and provenance channels.
+
 ### Execution interface (normative shape)
 
 The runtime submits a compiled payload through a uniform execution interface

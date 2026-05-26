@@ -356,6 +356,18 @@ portability, and inspectability over prompt-engineering artistry. The
 lowering table is the tuning surface -- improving prompt quality means
 improving clause templates and ordering, not rewriting adapter code.
 
+**Status update.** Phase 6L/6M provider work clarified the semantics of
+call-time `providerOptions`. Provider options are adapter-local execution
+inputs, not canonical Mosvera fields and not registry data. User-authored
+content fields such as `prompt`, `prompt_text`, `text`, and `script` are
+authoritative. Prompt-only adapters keep the user prompt first and append a
+separate `Mosvera aesthetic direction:` block assembled from the resolved
+aesthetic. Speech and avatar adapters keep `text` or `script` as the spoken
+content and carry Mosvera direction through provider style, motion,
+background, delivery, or metadata fields where available. This updates the
+adapter convention without changing the canonical schema or the MEP-0003
+lowering-action model.
+
 ### D3 -- Transport abstraction
 
 The `execute()` method returns `Promise<GenerationResult>` regardless of
