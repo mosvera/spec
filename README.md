@@ -28,10 +28,19 @@ OpenAI, FLUX, and SDXL without making prompts the source of truth.
 ## Which Package Do I Need?
 
 Use `@mosvera/runtime` when your app needs to validate Mosvera documents,
-resolve templates/modifiers/compositions, or produce the canonical model.
+resolve templates/modifiers/compositions, or produce the canonical model from
+a JavaScript or TypeScript environment.
 
 ```bash
 npm install @mosvera/runtime
+```
+
+Use `mosvera` when you need the same runtime contract from Python. The Python
+package is prepared for the coordinated JS/Python release, but not published
+to PyPI yet.
+
+```bash
+pip install mosvera
 ```
 
 Use provider packages when you want to compile resolved Mosvera intent into
@@ -57,10 +66,10 @@ contract.
 ## Status
 
 Mosvera is in Phase 6 mechanical public unlock. Phases 0-5 are complete:
-the v0.1 schemas, conformance vectors, TypeScript runtime, MCP surface,
-OpenAI adapter, FLUX adapter, SDXL adapter, and three worked examples are in
-place. The v0.1 interfaces remain provisional until external implementer
-feedback proves them stable.
+the v0.1 schemas, conformance vectors, TypeScript runtime, Python runtime,
+MCP surface, OpenAI adapter, FLUX adapter, SDXL adapter, and three worked
+examples are in place. The v0.1 interfaces remain provisional until external
+implementer feedback proves them stable.
 
 ## Repositories
 
@@ -68,6 +77,7 @@ feedback proves them stable.
 |------------|---------|
 | [`mosvera/spec`](https://github.com/mosvera/spec) | Specification, schemas, MEPs, conformance vectors, governance. |
 | [`mosvera/runtime`](https://github.com/mosvera/runtime) | TypeScript reference runtime. |
+| [`mosvera/python`](https://github.com/mosvera/python) | Python peer runtime. |
 | [`mosvera/providers`](https://github.com/mosvera/providers) | Reference provider adapters. |
 | [`mosvera/mcp`](https://github.com/mosvera/mcp) | MCP server exposing runtime tools. |
 | [`mosvera/examples`](https://github.com/mosvera/examples) | Generated galleries and metadata. |
