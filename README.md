@@ -54,8 +54,12 @@ Use `@mosvera/mcp` when you want Mosvera exposed as MCP tools for agents,
 editors, or automation:
 
 ```bash
-npx mosvera-mcp
+npm install -g @mosvera/mcp
+mosvera-mcp
 ```
+
+Claude Desktop users should prefer the `.mcpb` bundle attached to
+[`mosvera/mcp` releases](https://github.com/mosvera/mcp/releases).
 
 Use this spec repository when you are implementing Mosvera in another language,
 checking the schemas/conformance vectors, or proposing changes to the public

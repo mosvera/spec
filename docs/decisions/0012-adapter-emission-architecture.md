@@ -516,10 +516,12 @@ portability contract for the emission architecture: the Python port
   The runtime calls `compile()` first (pre-flight), then `emit()` if
   compilation succeeds.
 
-- The `compile_generation` MCP tool gains a `emit: true` option that
-  returns the full `EmissionResult` (payload + prompt + provenance)
-  instead of just the compilation decision. This is the "show me the
-  plan" capability.
+- The public MCP surface exposes deterministic provider payload compilation
+  through `compile_provider_payload`, superseding the prototype
+  `compile_generation` / `emit: true` shape that existed during Phase 4.
+  The tool returns the full `EmissionResult` (payload + prompt + provenance)
+  instead of just the compilation decision; this is the "show me the plan"
+  capability.
 
 - Lowering tables are JSON-serializable data. They can be inspected by
   the MCP surface, diffed across adapter versions, and used to generate

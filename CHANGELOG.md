@@ -17,6 +17,24 @@ once Phase 1 ships, see [`spec/meps/`](./meps/).
 
 ### Added
 
+- **Phase 6F — MCP Agent Runtime Bridge and Desktop Bundle.** Reframed
+  `@mosvera/mcp` from the Phase 3 five-tool prototype into an aesthetic-first
+  agent bridge:
+  - Public tool surface now centers `server_status`, `list_aesthetics`,
+    `resolve_aesthetic`, `compile_design_tokens`, local registry authoring,
+    and deterministic provider payload compilation.
+  - Tools return MCP `structuredContent`, define output schemas, and carry
+    read/write/destructive annotations.
+  - The default registry is user-owned local data, seeded on first run with
+    `quiet-editorial`, `technical-manual`, `cinematic-lab`, and
+    `claymation-playful-builder`; packaged examples are read-only fallback
+    fixtures.
+  - Added the MCPB bundle path for Claude Desktop users and kept npm as the
+    developer/automation path.
+  - Updated [MEP-0004](./meps/0004-mcp-tool-contract.md) and
+    [ADR-0011](./docs/decisions/0011-mcp-surface-design.md) to describe the
+    public MCP contract.
+
 - **Phase 6 — Public Unlock (package and contribution prep).** Prepared the
   local repository for public publication:
   - Public npm packages now build to `dist/` with JavaScript, source maps, and

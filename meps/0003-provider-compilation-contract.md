@@ -193,7 +193,7 @@ named adapter's manifest **before** compilation, and report:
 - a **warning** for every `optional` construct that is `unsupported`, and for
   every construct (required or optional) that is `approximate`/`emulate`.
 
-This is surfaced through the MCP `validate_schema` / `resolve_composition`
+This is surfaced through the MCP `validate_document` / `resolve_aesthetic`
 surface (see `mcp/`) so an AI-native caller can check
 provider-fit before requesting generation, mirroring Terraform's
 `GetProviderSchema`-before-plan validation
@@ -439,7 +439,7 @@ MEP-0001. Loss must always be visible.
   warn+drop; approximate → warn; native → clean. Plus the worked
   OpenAI/FLUX example as a golden compilation test, so any adapter and any
   runtime can be validated against identical expected artifacts.
-- **`compile_generation` with provenance** in the MCP surface: return the full
+- **`compile_provider_payload` with provenance** in the MCP surface: return the full
   compiled artifact (payload + warnings + provenance), not just the payload,
   satisfying the legibility guarantee end to end.
 - **A third, open-weights adapter (SDXL via Replicate)** per

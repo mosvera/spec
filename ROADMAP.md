@@ -24,18 +24,16 @@ shipped the SDXL adapter, ADR-0013, three example systems, three-provider
 deterministic emissions, MCP adapter registration, and checked-in gallery
 images for all three example systems.
 
-Phase 6 is now **in progress**. Local package publishing readiness is in
-place: every public package builds to `dist/`, `@mosvera/runtime` bundles the
-canonical schemas, `@mosvera/mcp` bundles a default example registry, GitHub CI
-and manual npm publish workflows are present, and the public issue/PR template
-surface is staged. The GitHub organization and `mosvera.io` holding page are
-live, with `.com`, `.org`, and `.dev` redirecting to `.io`. External
-publication is not yet claimed complete until the public repo split, npm
-packages, `mosvera.io` schema hosting, and "Infrastructure-as-Style" essay
-are live and verified.
+Phase 6 is now **in progress**. The public repo split is live, the
+TypeScript and Python runtimes are published, provider packages are published,
+and `@mosvera/mcp` has been reshaped into the Phase 6F agent bridge with a
+Claude Desktop MCPB bundle path. Remaining Phase 6 work is closeout,
+site/docs link verification, release-asset publication, and post-public smoke.
 
-Current local verification: 119 tests green across runtime, MCP, provider
-workspaces, and cross-provider vectors.
+Current local verification: runtime, Python runtime, providers, and MCP all
+pass their strict local suites; the MCP surface now has stdio smoke coverage
+for annotations, output schemas, read-only mode, aesthetic resolution, and
+token compilation.
 
 ## Phases
 
@@ -115,7 +113,7 @@ semantic logic stays as pure functions, separable from TS-idiomatic
 glue, so the Python port is a translation rather than a rewrite. No
 clever TS-only patterns in the semantic core.
 
-### Phase 3 — MCP Surface (complete)
+### Phase 3 — MCP Prototype Surface (complete)
 
 Expose Phase 2 runtime capabilities as a strict MCP server. Aligns
 Mosvera with AI-native orchestration from day one.
@@ -196,7 +194,8 @@ Outputs:
   per the eventual split signaled in ADR-0002
 - Publish `@mosvera/runtime`, `@mosvera/mcp`, `@mosvera/provider-base`,
   `@mosvera/provider-openai`, `@mosvera/provider-flux`, and
-  `@mosvera/provider-sdxl` to npm as installable JavaScript packages
+  `@mosvera/provider-sdxl` to npm as installable JavaScript packages; ship a
+  `.mcpb` desktop bundle for non-command-line Claude Desktop users
 - Open MEP process — `spec/meps/` becomes externally contributable
 - Governance transition: BDFL → small Technical Committee per
   [ADR-0004](./docs/decisions/0004-governance.md)
