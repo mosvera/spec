@@ -55,6 +55,12 @@ The provisional TS pick **survives research**, but with two binding constraints 
 - We will publish a Python runtime port in parallel with or shortly after Mosvera 1.0; if we cannot fund this, we should narrow Mosvera's claim or recruit a maintainer before locking the spec.
 - We will explicitly *not* claim multi-language SDKs in the README before they exist. Public-first doctrine: no aspirational marketing.
 
+## Status Update
+
+Phase 6E shipped the Python runtime earlier than this ADR's latest acceptable
+window. The published `mosvera@0.1.2` package now passes the shared conformance
+suite as a peer runtime alongside `@mosvera/runtime`.
+
 ## Sources
 
 1. [GraphQL: A data query language (Engineering at Meta, Sept 2015)](https://engineering.fb.com/2015/09/14/core-infra/graphql-a-data-query-language/) — historical record that Facebook released spec + JS reference together; ports came later from community.

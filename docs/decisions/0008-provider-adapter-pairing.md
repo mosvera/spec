@@ -72,6 +72,13 @@ The provisional OpenAI + Flux pick **survives research, with FLUX.2-pro specifie
 - The Phase 6 plan should land the Runway adapter once Mosvera's motion primitives are designed.
 - We must add a documented exclusion policy: Mosvera will not accept provider adapters that rely on unofficial / reverse-engineered APIs (closes the door on Midjourney via third parties).
 
+## Status Update
+
+This ADR records the Phase 4 adapter decision, not the current provider set.
+SDXL shipped in Phase 5. Phase 6L added Runway and Adobe Firefly provider
+adapters, alongside Google, ElevenLabs, and Meshy. Runway's adapter can compile
+video payloads today; portable motion primitives still require follow-on MEPs.
+
 ## Sources
 
 1. [OpenAI Image Generation API guide](https://developers.openai.com/api/docs/guides/image-generation) and [GPT Image 1 model reference](https://developers.openai.com/api/docs/models/gpt-image-1) — authoritative parameter surface for the OpenAI adapter (`size`, `quality`, `output_format`, `output_compression`, `moderation`, `n`, `stream`).

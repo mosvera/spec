@@ -24,18 +24,19 @@ shipped the SDXL adapter, ADR-0013, three example systems, three-provider
 deterministic emissions, MCP adapter registration, and checked-in gallery
 images for all three example systems.
 
-Phase 6 is **complete through Phase 6L**. The public repo split is live, the
+Phase 6 is **complete through Phase 6M**. The public repo split is live, the
 TypeScript and Python runtimes are published, provider packages are published,
 `@mosvera/mcp@0.1.6` is published, and the `mosvera-mcp-0.1.6.mcpb` Claude
 Desktop bundle is attached to the latest MCP release. Phase 6L expanded the
 provider layer beyond still images with Google, Runway, ElevenLabs, Adobe
-Firefly, and Meshy provider packages.
+Firefly, and Meshy provider packages. Phase 6M reconciled the public package,
+deployment, and roadmap surface after that release.
 
 Current verification: runtime, Python runtime, providers, and MCP pass their
 strict local suites; MCP GitHub Actions is green; npm clean install/import
 passes for the runtime, providers, and MCP; live provider smoke passed for
 Google, Runway, ElevenLabs, and Meshy, with Firefly skipped until credentials
-exist.
+exist. `@mosvera/provider-heygen@0.1.1` is published and installable.
 
 ## Phases
 
@@ -180,7 +181,7 @@ Outputs in `examples/` and `providers/`:
   aggregator adapter (per ADR-0008 staging), with the surface decision
   recorded in ADR-0013
 
-### Phase 6 — Public Unlock (in progress)
+### Phase 6 — Public Unlock (complete through Phase 6M)
 
 Triggered now that Phases 1-5 are durable enough to expose. The strategic
 plan's Phase 2/3 sequence.
@@ -196,7 +197,8 @@ Outputs:
   per the eventual split signaled in ADR-0002
 - Publish `@mosvera/runtime`, `@mosvera/mcp`, `@mosvera/provider-base`,
   `@mosvera/provider-openai`, `@mosvera/provider-flux`,
-  `@mosvera/provider-sdxl`, `@mosvera/provider-google`,
+  `@mosvera/provider-sdxl`, `@mosvera/provider-heygen`,
+  `@mosvera/provider-google`,
   `@mosvera/provider-runway`, `@mosvera/provider-elevenlabs`,
   `@mosvera/provider-firefly`, and `@mosvera/provider-meshy` to npm as
   installable JavaScript packages; ship a `.mcpb` desktop bundle for
@@ -208,20 +210,28 @@ Outputs:
   Development Foundation candidates), gated on having at least one
   external provider implementation in production
 
-### Phase 7 — Python Runtime Port
+### Phase 7 — First External Implementer Feedback
 
-[ADR-0007](./docs/decisions/0007-reference-runtime-language.md)
-commits to a Python runtime port no later than the second minor
-release after 1.0. The conformance suite from Phase 1 is the
-correctness contract; the Python implementation passes it before the
-port is published.
+The Python runtime port originally planned for a later phase shipped early as
+`mosvera@0.1.2`, alongside `@mosvera/runtime`. The next phase is no longer a
+language-port milestone; it is a feedback and hardening loop around first
+external users.
 
-### Phase 8 — Motion Surface and Runway Adapter
+Outputs:
+- collect first-user friction from Claude Desktop, npm/MCP, TypeScript, and
+  Python quickstart paths
+- tighten MCP result text where structured tool output is not visible enough in
+  real clients
+- decide whether HTTP/SSE transport is justified by an external integration
+  request
+- graduate any common provider concepts discovered in Phase 6L into MEPs
 
-Mosvera introduces motion/temporal primitives and adds the Runway
-adapter per ADR-0008's deferral. Same composition compiles to image
-providers (Phase 4) and video providers (Phase 8) — the strongest
-demonstration of the abstraction's reach.
+### Phase 8 — Motion Surface MEPs
+
+Runway now exists as a provider adapter, but the language-neutral spec still
+needs to decide which motion and temporal concepts belong in Mosvera itself.
+Phase 8 is the MEP work that separates provider-specific video options from
+portable motion primitives.
 
 ## What this roadmap does not promise
 
@@ -229,11 +239,10 @@ Per [Doctrine 1](./CLAUDE.md#1-public-first), no aspirational
 marketing. The roadmap states what's planned, not what's claimed.
 
 - No timeline commitments. Phases ship when their criteria are met.
-- No multi-language SDKs claimed before they exist. The Python port
-  in Phase 7 is committed-to, but it is not in the README until it
-  ships.
+- No multi-language SDKs claimed before they exist. The Python runtime now
+  exists and is documented; future runtime ports should follow the same rule.
 - No foundation hosting claimed before it is signed.
-- No provider adapters claimed beyond OpenAI + FLUX + SDXL until they ship.
+- No provider adapters claimed before they ship.
 
 ## Living document
 

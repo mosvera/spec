@@ -505,8 +505,12 @@ automatically; `apply` results are validated by operators.
 **Conformance vectors.** Phase 4 adds a new conformance vector category
 in `spec/compliance/emission/` -- canonical composition + provider ID ->
 expected emission result. These vectors are the cross-language
-portability contract for the emission architecture: the Python port
-(Phase 7) must pass them.
+portability contract for the emission architecture. At the time this ADR was
+accepted, the planned Python port was the next runtime expected to pass them.
+
+**Status update.** The Python runtime shipped early in Phase 6E as
+`mosvera@0.1.2`. Current cross-runtime checks use the shared compliance suite
+as the portability contract for the published TypeScript and Python runtimes.
 
 ## Consequences
 
@@ -546,7 +550,7 @@ portability contract for the emission architecture: the Python port
 
 - The `ProviderAdapter` interface is spec-neutral per Doctrine 3. The
   TypeScript interface defined here is the reference implementation; the
-  Python port implements the same contract. The conformance vectors in
+  Python runtime implements the same contract. The conformance vectors in
   `spec/compliance/emission/` are the language-neutral contract.
 
 ## Sources

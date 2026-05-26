@@ -79,8 +79,9 @@ proposing changes to the public contract.
 
 ## Status
 
-Phase 6L is complete: the first public runtime surface is available and the
-provider layer now spans image, video, audio, and 3D payload compilation. The
+Phase 6M is complete: the first public runtime surface is available, the
+provider layer now spans image, video, audio, and 3D payload compilation, and
+the release surface has been reconciled after publication. The
 v0.1 schemas, conformance vectors, TypeScript runtime, Python runtime, MCP
 bridge, OpenAI adapter, FLUX adapter, SDXL adapter, HeyGen adapter, Google
 adapter, Runway adapter, ElevenLabs adapter, Firefly adapter, Meshy adapter,
