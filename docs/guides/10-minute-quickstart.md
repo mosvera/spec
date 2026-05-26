@@ -234,3 +234,6 @@ You validated a portable aesthetic pack, imported it into a local registry,
 resolved a named aesthetic into Mosvera's canonical model, and compiled that
 model into portable tokens. Claude Desktop and other MCP hosts do this through
 tools; TypeScript and Python apps do it by importing the runtime directly.
+
+For a plain-language diagram of this flow, see the
+[`What just happened?` explainer on mosvera.io](https://mosvera.io/#what-just-happened).
