@@ -18,12 +18,13 @@ Each conformance case is a JSON document conforming to
 **`resolution`** — exercises MEP-0001 (composition) and MEP-0002
 (inheritance):
 
-- `registry` — named templates/modifiers/palettes available for
+- `registry` — named templates/modifiers/palettes/compositions available for
   reference resolution.
 - `merge_strategies` — per-field list-merge strategy (`replace` /
   `append` / `merge_by`); schema-declared in real runtimes, carried
   inline in the vector.
-- `input` + `input_kind` — the composition or template to resolve.
+- `input` + `input_kind` — the composition, template, palette, or named
+  composition reference to resolve.
 - `expect` — either `{ canonical: … }` (the expected resolved
   aesthetic model) or `{ status: "error", error: … }`.
 
@@ -51,19 +52,20 @@ contract that makes Mosvera implementations substitutable.
 
 | Directory | Vectors |
 |-----------|---------|
-| [`resolution/`](./resolution/) | MEP-0001 merge/precedence + MEP-0002 inheritance (0001–0016) |
+| [`resolution/`](./resolution/) | MEP-0001 merge/precedence + MEP-0002 inheritance (0001–0016, 0022–0025) |
 | [`compilation/`](./compilation/) | MEP-0003 compilation contract outcomes (0017–0021) |
 
 ## Status
 
-Phase 1 (Specification Genesis). 21 vectors present, covering the
+Phase 6D. 25 vectors present, covering the
 normative behaviors of all three foundational MEPs: deep/scalar/
 type-mismatch merge, the three list strategies, `$unset`/`$revert`,
 the precedence chain, single inheritance + multi-level chains, the
 inheritance/composition seam, `$revert` and `merge_by` across the
 inheritance boundary, inheritance-cycle and multiple-inheritance
-rejection, and the full compilation criticality × lowering-action
-rule table.
+rejection, palette inheritance, named composition lookup,
+missing-reference taxonomy, and the full compilation criticality ×
+lowering-action rule table.
 
 Each vector was verified during authoring against an independent
 reference oracle (the expected output recomputed and matched), the
